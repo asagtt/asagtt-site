@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   :root{
     --navy:#1e3a5f; --navy-dark:#132840; --red:#c23a3a; --ink:#14181c;
@@ -371,6 +372,12 @@
   renderGalerie();
   renderActus();
   renderEvenements();
+
+  if (window.netlifyIdentity) {
+    netlifyIdentity.on("login", () => {
+      document.location.href = "/admin/";
+    });
+  }
 </script>
 
 </body>
