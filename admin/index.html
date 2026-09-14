@@ -160,12 +160,16 @@
     const roles = getRoles(user);
     const isPresident = roles.includes("president");
 
-    const filtered = Object.assign({}, FULL_CONFIG, {
-      collections: FULL_CONFIG.collections.filter(c =>
-        isPresident || c.roles.some(r => roles.includes(r))
-      )
-    });
+    let cols = FULL_CONFIG.collections.filter(c =>
+      isPresident || c.roles.some(r => roles.includes(r))
+    );
 
+    if (cols.length === 0) {
+      console.warn("Aucun rôle reconnu pour cet utilisateur (roles reçus : " + JSON.stringify(roles) + "). Accès complet affiché par sécurité — à corriger côté Netlify Identity.");
+      cols = FULL_CONFIG.collections;
+    }
+
+    const filtered = Object.assign({}, FULL_CONFIG, { collections: cols });
     window.CMS.init({ config: filtered });
   }
 
