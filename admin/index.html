@@ -152,18 +152,11 @@
     ]
   };
 
-  netlifyIdentity.on("init", user => {
-    if (!user) {
-      netlifyIdentity.on("login", () => { document.location.reload(); });
-    }
-  });
-
   function getRoles(user){
     return (user && user.app_metadata && user.app_metadata.roles) || [];
   }
 
-  function initCMS(){
-    const user = netlifyIdentity.currentUser();
+  function initCMS(user){
     const roles = getRoles(user);
     const isPresident = roles.includes("president");
 
@@ -176,12 +169,14 @@
     window.CMS.init({ config: filtered });
   }
 
-  if (netlifyIdentity.currentUser()) {
-    initCMS();
-  } else {
-    netlifyIdentity.open();
-    netlifyIdentity.on("login", initCMS);
-  }
+  netlifyIdentity.on("init", user => {
+    if (user) {
+      initCMS(user);
+    } else {
+      netlifyIdentity.on("login", () => { document.location.reload(); });
+      netlifyIdentity.open();
+    }
+  });
 </script>
 </body>
 </html>
