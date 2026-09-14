@@ -374,9 +374,13 @@
   renderEvenements();
 
   if (window.netlifyIdentity) {
-    netlifyIdentity.on("login", () => {
-      document.location.href = "/admin/";
-    });
+    const hash = window.location.hash || "";
+    const isAuthFlow = /invite_token|recovery_token|confirmation_token/.test(hash);
+    if (isAuthFlow) {
+      netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
   }
 </script>
 
