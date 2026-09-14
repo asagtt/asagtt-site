@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Administration — ASAGTT</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+  // ---- Configuration complète du CMS ----
+  // Chaque collection porte une liste "roles" (propriété custom, lue plus bas)
+  // qui détermine qui peut la voir : "president" (accès complet) ou "com" (Community Manager).
+  const FULL_CONFIG = {
+    backend: {
+      name: "git-gateway",
+      branch: "main"
+    },
+    media_folder: "images",
+    public_folder: "/images",
+    collections: [
+      {
+        name: "infos",
+        label: "Infos du club (Président)",
+        roles: ["president"],
+        files: [
+          {
+            name: "site",
+            label: "Contenu général du site",
+            file: "content/site.json",
+            fields: [
+              { name: "hero_tag", label: "Bandeau d'accroche", widget: "string" },
+              { name: "hero_title_1", label: "Titre — ligne 1", widget: "string" },
+              { name: "hero_title_2", label: "Titre — ligne 2", widget: "string" },
+              { name: "hero_lead", label: "Texte d'introduction", widget: "text" },
+              { name: "presentation", label: "Présentation du club (paragraphes)", widget: "list", field: { name: "paragraphe", widget: "text" } },
+              {
+                name: "horaires", label: "Horaires d'entraînement", widget: "list",
+                fields: [
+                  { name: "jour", label: "Jour", widget: "string" },
+                  { name: "detail", label: "Détail du créneau", widget: "string" }
+                ]
+              },
+              { name: "lieu", label: "Lieu d'entraînement", widget: "string" },
+              {
+                name: "tarifs", label: "Tarifs licence", widget: "list",
+                fields: [
+                  { name: "label", label: "Catégorie", widget: "string" },
+                  { name: "montant", label: "Montant", widget: "string" }
+                ]
+              },
+              { name: "tarif_note", label: "Note sous les tarifs", widget: "text" },
+              {
+                name: "sportif_journees", label: "Prochaines journées de championnat", widget: "list",
+                fields: [
+                  { name: "code", label: "Code (ex. J1)", widget: "string" },
+                  { name: "detail", label: "Détail", widget: "string" }
+                ]
+              },
+              { name: "sportif_resultats_note", label: "Note derniers résultats", widget: "string" },
+              { name: "spid_link", label: "Lien FFTT / SPID (résultats officiels)", widget: "string", required: false },
+              {
+                name: "contact", label: "Contact", widget: "object",
+                fields: [
+                  { name: "president_nom", label: "Nom du président", widget: "string" },
+                  { name: "president_tel", label: "Téléphone président", widget: "string" },
+                  { name: "secretaire_nom", label: "Nom du secrétaire", widget: "string" },
+                  { name: "secretaire_tel", label: "Téléphone secrétaire", widget: "string" },
+                  { name: "email", label: "Email du club", widget: "string" },
+                  { name: "adresse", label: "Adresse (HTML autorisé pour le retour à la ligne <br>)", widget: "text" },
+                  { name: "instagram", label: "Lien Instagram", widget: "string" },
+                  { name: "facebook", label: "Lien Facebook", widget: "string" }
+                ]
+              },
+              { name: "affiliation", label: "Référence préfectorale association", widget: "string" },
+              { name: "numero_club_fftt", label: "Numéro d'affiliation FFTT du club", widget: "string" }
+            ]
+          }
+        ]
+      },
+      {
+        name: "galerie",
+        label: "Galerie photo",
+        roles: ["president", "com"],
+        files: [
+          {
+            name: "galerie",
+            label: "Photos de la galerie",
+            file: "content/galerie.json",
+            fields: [
+              {
+                name: "photos", label: "Photos", widget: "list",
+                fields: [
+                  { name: "image", label: "Photo", widget: "image" },
+                  { name: "legende", label: "Légende", widget: "string" },
+                  { name: "taille", label: "Taille d'affichage", widget: "select", options: ["normale", "large", "haute"], default: "normale" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: "actualites",
+        label: "Actualités",
+        roles: ["president", "com"],
+        files: [
+          {
+            name: "actualites",
+            label: "Liste des actualités",
+            file: "content/actualites.json",
+            fields: [
+              {
+                name: "actus", label: "Actualités", widget: "list",
+                fields: [
+                  { name: "date_label", label: "Repère temporel (ex. SEPTEMBRE)", widget: "string" },
+                  { name: "titre", label: "Titre", widget: "string" },
+                  { name: "texte", label: "Texte", widget: "text" },
+                  { name: "lien_billetterie", label: "Renvoyer vers la Boutique & billetterie ?", widget: "boolean", default: false }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: "evenements",
+        label: "Boutique & billetterie",
+        roles: ["president", "com"],
+        files: [
+          {
+            name: "evenements",
+            label: "Événements et paiement",
+            file: "content/evenements.json",
+            fields: [
+              {
+                name: "evenements", label: "Événements à venir", widget: "list",
+                fields: [
+                  { name: "nom", label: "Nom de l'événement", widget: "string" },
+                  { name: "statut", label: "Statut (ex. Bientôt, Ouvert)", widget: "string" }
+                ]
+              },
+              { name: "lien_paiement", label: "Lien de paiement en ligne", widget: "string", required: false },
+              { name: "note", label: "Note affichée sous les événements", widget: "text" }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+
+  netlifyIdentity.on("init", user => {
+    if (!user) {
+      netlifyIdentity.on("login", () => { document.location.reload(); });
+    }
+  });
+
+  function getRoles(user){
+    return (user && user.app_metadata && user.app_metadata.roles) || [];
+  }
+
+  function initCMS(){
+    const user = netlifyIdentity.currentUser();
+    const roles = getRoles(user);
+    const isPresident = roles.includes("president");
+
+    const filtered = Object.assign({}, FULL_CONFIG, {
+      collections: FULL_CONFIG.collections.filter(c =>
+        isPresident || c.roles.some(r => roles.includes(r))
+      )
+    });
+
+    window.CMS.init({ config: filtered });
+  }
+
+  if (netlifyIdentity.currentUser()) {
+    initCMS();
+  } else {
+    netlifyIdentity.open();
+    netlifyIdentity.on("login", initCMS);
+  }
+</script>
+</body>
+</html>

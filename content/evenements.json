@@ -1,0 +1,7 @@
+{
+  "evenements": [
+    { "nom": "Concours de belote — date à venir", "statut": "Bientôt" }
+  ],
+  "lien_paiement": "",
+  "note": "Chaque actualité mise en avant (ex. concours de belote) pointera vers sa fiche ici, avec inscription et paiement."
+}

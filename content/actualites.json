@@ -1,0 +1,22 @@
+{
+  "actus": [
+    {
+      "date_label": "SEPTEMBRE",
+      "titre": "Sortie de rentrée",
+      "texte": "Sortie en mer au départ des Sables-d'Olonne, entre membres du club — retour attendu en octobre pour la sortie de printemps.",
+      "lien_billetterie": false
+    },
+    {
+      "date_label": "TOUTE LA SAISON",
+      "titre": "Belote & pétanque",
+      "texte": "Les tournois de belote et de pétanque rythment la vie du club — dates communiquées via nos réseaux sociaux.",
+      "lien_billetterie": true
+    },
+    {
+      "date_label": "SUR DEMANDE",
+      "titre": "Séances d'essai",
+      "texte": "Venez tester gratuitement un entraînement le vendredi soir, sans engagement — contactez-nous pour convenir d'une date.",
+      "lien_billetterie": false
+    }
+  ]
+}

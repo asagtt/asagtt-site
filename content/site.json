@@ -1,0 +1,45 @@
+{
+  "hero_tag": "CLUB AFFILIÉ FFTT — SAISON 2026-2027",
+  "hero_title_1": "On peut commencer à 6 ans,",
+  "hero_title_2": "continuer à 70.",
+  "hero_lead": "École de jeunes, loisir libre et compétition, dans la salle du Moulin des Landes. Le club de La Haye-Fouassière accueille tous les niveaux, du débutant au licencié compétiteur.",
+  "presentation": [
+    "Affilié à la Fédération Française de Tennis de Table, le club de La Haye-Fouassière accueille chaque saison des pratiquants de tous âges et de tous niveaux, du débutant au compétiteur licencié.",
+    "Structuré autour d'une école de jeunes, de créneaux de loisir libre et de créneaux d'entraînement pour la compétition, le club permet à chacun de progresser à son rythme dans un cadre encadré et sécurisé. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
+    "Au-delà de l'activité sportive, le club s'appuie sur une vie associative active — événements, animations et moments de convivialité tout au long de la saison — portée par ses bénévoles et son bureau.",
+    "Pour toute demande d'information ou pour organiser une séance d'essai, n'hésitez pas à nous contacter."
+  ],
+  "horaires": [
+    { "jour": "Vendredi", "detail": "18h30 – 20h00 · créneau jeunes" },
+    { "jour": "Vendredi", "detail": "20h00 – 21h30 · créneau adultes" },
+    { "jour": "Vendredi", "detail": "Après 21h30 · loisir libre" },
+    { "jour": "Samedi", "detail": "Compétition jeunes (selon calendrier)" },
+    { "jour": "Dimanche", "detail": "Compétition (selon calendrier du championnat)" }
+  ],
+  "lieu": "Salle du Moulin des Landes — La Haye-Fouassière",
+  "tarifs": [
+    { "label": "Jusqu'à 18 ans", "montant": "110 €" },
+    { "label": "Adulte", "montant": "120 €" },
+    { "label": "Critérium", "montant": "variable" }
+  ],
+  "tarif_note": "Tarif du critérium ajusté selon les compétitions. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
+  "sportif_journees": [
+    { "code": "J1", "detail": "Équipe 1 — à domicile (date à venir)" },
+    { "code": "J2", "detail": "Équipe 1 — déplacement (date à venir)" },
+    { "code": "J1", "detail": "Équipe jeunes — à domicile (date à venir)" }
+  ],
+  "sportif_resultats_note": "Résultats à venir en début de saison",
+  "spid_link": "",
+  "contact": {
+    "president_nom": "Tristan Guiheneuf",
+    "president_tel": "06 62 29 17 22",
+    "secretaire_nom": "Christine Guevel",
+    "secretaire_tel": "07 71 01 65 77",
+    "email": "asagtt@gmail.com",
+    "adresse": "Salle du Moulin des Landes<br>Allée des sports, 44690 La Haye-Fouassière",
+    "instagram": "https://www.instagram.com/tennisdetable_lahayefouassiere?stkn=MWswY3lrNmlrN3A1Nw==",
+    "facebook": "https://www.facebook.com/share/1CkidWHxLg/"
+  },
+  "affiliation": "W442009268",
+  "numero_club_fftt": "12440039"
+}

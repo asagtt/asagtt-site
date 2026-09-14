@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASAG Tennis de Table La Haye-Fouassière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1e3a5f; --navy-dark:#132840; --red:#c23a3a; --ink:#14181c;
+    --paper:#f7f6f3; --paper-dim:#eeece6; --orange:#e8964a; --white:#ffffff;
+    --line: rgba(20,24,28,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper); color:var(--ink); font-family:'Work Sans', system-ui, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Bebas Neue', system-ui, sans-serif; font-weight:400; letter-spacing:0.01em; line-height:0.95;}
+  a{color:inherit;} img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  header{position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line);}
+  .headbar{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1120px; margin:0 auto; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand img{height:46px; width:auto;}
+  .brand-text{font-family:'Bebas Neue', sans-serif; font-size:1.35rem; letter-spacing:0.02em; color:var(--navy);}
+  .brand-text span{display:block; font-family:'Work Sans',sans-serif; font-size:0.62rem; letter-spacing:0.08em; color:var(--ink); opacity:0.6; font-weight:600;}
+  nav{display:flex; gap:28px;}
+  nav a{font-size:0.92rem; font-weight:600; text-decoration:none; color:var(--ink); position:relative; padding:4px 0;}
+  nav a::after{content:""; position:absolute; left:0; right:0; bottom:-3px; height:2px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform 0.2s ease;}
+  nav a:hover::after{transform:scaleX(1);}
+  .nav-toggle{display:none; background:none; border:0; color:var(--ink); cursor:pointer; font-size:1.4rem;}
+  .hero{display:grid; grid-template-columns:1.05fr 0.95fr; align-items:stretch; border-bottom:1px solid var(--line);}
+  .hero-copy{padding:64px 24px 64px calc((100vw - 1120px)/2 + 24px); max-width:640px; display:flex; flex-direction:column; justify-content:center; background:var(--paper);}
+  @media (min-width:1121px){.hero-copy{padding-left:calc((100vw - 1120px)/2 + 24px);}}
+  .hero-tag{color:var(--red); font-weight:700; font-size:0.82rem; letter-spacing:0.06em; margin-bottom:14px;}
+  .hero h1{font-size:clamp(2.8rem, 6.5vw, 4.6rem); color:var(--navy); margin-bottom:20px;}
+  .hero h1 em{font-style:normal; color:var(--red);}
+  .hero p.lead{font-size:1.08rem; max-width:46ch; opacity:0.85; margin-bottom:28px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 24px; font-weight:600; font-size:0.95rem; text-decoration:none; border-radius:2px; border:1.5px solid transparent; transition: transform 0.15s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--red); color:#fff;}
+  .btn-ghost{border-color:var(--ink); color:var(--ink);}
+  .hero-media{position:relative; min-height:340px; overflow:hidden; background:var(--navy-dark);}
+  .hero-media img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .hero-media .cap{position:absolute; left:0; right:0; bottom:0; padding:14px 20px; background:linear-gradient(0deg, rgba(0,0,0,0.55), transparent); color:#fff; font-size:0.82rem; font-weight:500;}
+  section{padding:76px 0;}
+  .section-head{margin-bottom:36px; max-width:640px;}
+  .section-head h2{font-size:clamp(2.1rem, 4vw, 3rem); color:var(--navy);}
+  .section-head p{opacity:0.75; margin-top:10px; font-size:1.02rem;}
+  .club-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .club-grid p{margin-bottom:16px; opacity:0.88;}
+  .club-grid strong{color:var(--navy);}
+  .info-card{background:var(--white); border:1px solid var(--line); padding:28px;}
+  .info-card h3{font-family:'Work Sans',sans-serif; font-weight:700; font-size:1rem; margin-bottom:16px; color:var(--navy);}
+  table.schedule{width:100%; border-collapse:collapse; font-size:0.94rem;}
+  table.schedule td{padding:10px 0; border-bottom:1px solid var(--line); vertical-align:top;}
+  table.schedule td:first-child{color:var(--ink); opacity:0.7; padding-right:12px; white-space:nowrap;}
+  table.schedule tr:last-child td{border-bottom:0;}
+  .loc{font-size:0.88rem; opacity:0.7; margin-top:14px;}
+  .tariff-row{display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line); font-size:0.95rem;}
+  .tariff-row:last-child{border-bottom:0;}
+  .tariff-amount{font-family:'Bebas Neue',sans-serif; font-size:1.3rem; color:var(--red);}
+  .news{background:var(--paper-dim);}
+  .news-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .news-card{background:var(--paper-dim); padding:26px;}
+  .news-date{font-size:0.78rem; font-weight:700; color:var(--red); letter-spacing:0.04em; margin-bottom:10px;}
+  .news-card h4{font-family:'Work Sans',sans-serif; font-weight:700; font-size:1.02rem; margin-bottom:8px;}
+  .news-card p{font-size:0.9rem; opacity:0.75;}
+  .news-link{display:inline-block; margin-top:14px; font-size:0.86rem; font-weight:700; color:var(--red); text-decoration:none;}
+  .news-link:hover{text-decoration:underline;}
+  .gallery{display:grid; grid-template-columns:repeat(4, 1fr); grid-auto-rows:160px; gap:6px;}
+  .gallery figure{position:relative; overflow:hidden; background:var(--navy-dark);}
+  .gallery img{width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;}
+  .gallery figure:hover img{transform:scale(1.05);}
+  .gallery figcaption{position:absolute; left:0; right:0; bottom:0; padding:10px 12px; background:linear-gradient(0deg, rgba(0,0,0,0.6), transparent); color:#fff; font-size:0.76rem; opacity:0; transition:opacity 0.25s ease;}
+  .gallery figure:hover figcaption{opacity:1;}
+  .g-wide{grid-column:span 2; grid-row:span 2;}
+  .g-tall{grid-row:span 2;}
+  .shop{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line);}
+  .shop-panel{padding:40px; background:var(--white);}
+  .shop-panel + .shop-panel{border-left:1px solid var(--line);}
+  .shop-panel h3{font-family:'Work Sans',sans-serif; font-weight:700; font-size:1.15rem; margin-bottom:12px; color:var(--navy);}
+  .shop-panel p{opacity:0.8; font-size:0.95rem; margin-bottom:20px;}
+  .qr-box{width:132px; height:132px; border:1.5px dashed var(--line); display:flex; align-items:center; justify-content:center; font-size:0.72rem; text-align:center; opacity:0.55; margin-bottom:18px; padding:10px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .contact-line{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);}
+  .contact-line:first-child{padding-top:0;}
+  .contact-role{width:120px; flex-shrink:0; font-weight:700; color:var(--navy); font-size:0.9rem;}
+  .contact-detail{font-size:0.95rem; opacity:0.85;}
+  .social-row{display:flex; gap:12px; margin-top:22px;}
+  .social-pill{display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border:1.5px solid var(--ink); text-decoration:none; font-size:0.88rem; font-weight:600;}
+  .social-pill:hover{background:var(--ink); color:var(--paper);}
+  .map-frame{background:var(--navy-dark); border:1px solid var(--line); min-height:280px; display:flex; align-items:center; justify-content:center; color:#fff; opacity:0.85; font-size:0.9rem; text-align:center; padding:24px;}
+  footer{border-top:1px solid var(--line); padding:36px 0;}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:0.82rem; opacity:0.65;}
+  .foot-row a{text-decoration:underline; text-underline-offset:2px;}
+  @media (max-width:860px){
+    nav{position:fixed; top:73px; left:0; right:0; bottom:0; background:var(--paper); flex-direction:column; padding:24px; transform:translateX(100%); transition:transform 0.25s ease; border-top:1px solid var(--line);}
+    nav.open{transform:translateX(0);}
+    nav a{font-size:1.3rem; padding:12px 0; border-bottom:1px solid var(--line);}
+    .nav-toggle{display:block;}
+    .hero{grid-template-columns:1fr;} .hero-copy{padding:40px 24px;} .hero-media{min-height:260px;}
+    .club-grid{grid-template-columns:1fr; gap:40px;}
+    .news-grid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2,1fr); grid-auto-rows:130px;} .g-wide{grid-column:span 2;}
+    .shop{grid-template-columns:1fr;} .shop-panel + .shop-panel{border-left:0; border-top:1px solid var(--line);}
+    .contact-grid{grid-template-columns:1fr;}
+    section{padding:52px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="headbar">
+    <a class="brand" href="#accueil">
+      <img src="/images/asagtt-logo.png" alt="Logo ASAG Tennis de Table La Haye-Fouassière">
+      <span class="brand-text">ASAGTT<span>Tennis de table — La Haye-Fouassière</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+    <nav id="mainNav">
+      <a href="#accueil">Accueil</a>
+      <a href="#club">Le club</a>
+      <a href="#sportif">Sportif</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#boutique">Boutique &amp; billetterie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="accueil" style="padding-top:0; padding-bottom:0;">
+  <div class="hero-copy">
+    <div class="hero-tag" id="heroTag"></div>
+    <h1 id="heroTitle"></h1>
+    <p class="lead" id="heroLead"></p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Demander une séance d'essai</a>
+      <a href="#club" class="btn btn-ghost">Horaires &amp; tarifs</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="/images/asagtt-trophee.jpg" alt="Trophée du Challenge Pascal Luneau posé sur une table de tennis de table">
+    <div class="cap">Challenge Pascal Luneau — salle du Moulin des Landes</div>
+  </div>
+</section>
+
+<section class="news">
+  <div class="wrap">
+    <div class="section-head"><h2>Actualités</h2><p>Les derniers événements et rendez-vous du club.</p></div>
+    <div class="news-grid" id="newsGrid"></div>
+  </div>
+</section>
+
+<section id="club">
+  <div class="wrap">
+    <div class="section-head"><h2>Le club</h2></div>
+    <div class="club-grid">
+      <div id="presentation"></div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="info-card">
+          <h3>Lieu &amp; horaires d'entraînement</h3>
+          <table class="schedule" id="horairesTable"></table>
+          <p class="loc" id="lieuText"></p>
+        </div>
+        <div class="info-card">
+          <h3>Licence &amp; cotisation</h3>
+          <div id="tarifsList"></div>
+          <p class="loc" id="tarifNote"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sportif">
+  <div class="wrap">
+    <div class="section-head"><h2>Sportif</h2><p>Journées de championnat et résultats de nos équipes.</p></div>
+    <div class="club-grid">
+      <div class="info-card">
+        <h3>Prochaines journées</h3>
+        <table class="schedule" id="journeesTable"></table>
+        <p class="loc">Calendrier complet mis à jour à chaque nouvelle journée de championnat.</p>
+      </div>
+      <div class="info-card">
+        <h3>Derniers résultats</h3>
+        <table class="schedule"><tr><td>—</td><td id="resultatsNote"></td></tr></table>
+        <p class="loc" style="margin-top:14px;">Le classement et l'historique complet des rencontres restent consultables en direct sur le site officiel de la FFTT (SPID), via le bouton ci-dessous.</p>
+        <a href="#" id="spidLink" class="btn btn-ghost" style="margin-top:18px;">Voir sur FFTT / SPID ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie" style="background:var(--paper-dim);">
+  <div class="wrap">
+    <div class="section-head"><h2>Galerie</h2><p>Entraînements, compétitions et moments de vie associative.</p></div>
+    <div class="gallery" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section id="boutique">
+  <div class="wrap">
+    <div class="section-head"><h2>Boutique &amp; billetterie</h2><p>Inscriptions et paiements pour les manifestations du club.</p></div>
+    <div class="shop">
+      <div class="shop-panel">
+        <h3>Événements à venir</h3>
+        <div id="evenementsList"></div>
+        <p style="font-size:0.85rem; opacity:0.6; margin-top:14px;" id="evenementsNote"></p>
+      </div>
+      <div class="shop-panel">
+        <h3>Paiement en ligne</h3>
+        <p>Réglez votre inscription directement via notre solution de paiement en ligne sécurisée, par lien ou QR code.</p>
+        <div class="qr-box">QR code paiement<br>à intégrer</div>
+        <a href="#" id="paiementLink" class="btn btn-ghost">Lien de paiement (à venir)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--paper-dim);">
+  <div class="wrap">
+    <div class="section-head"><h2>Contact</h2></div>
+    <div class="contact-grid">
+      <div class="contact-card" id="contactCard"></div>
+      <div class="map-frame">Emplacement carte — Salle du Moulin des Landes, La Haye-Fouassière</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span id="footerText"></span>
+    <a href="/mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  async function loadJSON(path){
+    const res = await fetch(path, {cache:'no-store'});
+    if(!res.ok) throw new Error('fetch failed: ' + path);
+    return res.json();
+  }
+
+  function el(tag, cls, html){
+    const e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(html !== undefined) e.innerHTML = html;
+    return e;
+  }
+
+  async function renderSite(){
+    try {
+      const s = await loadJSON('/content/site.json');
+      document.getElementById('heroTag').textContent = s.hero_tag;
+      document.getElementById('heroTitle').innerHTML = s.hero_title_1 + '<br>' + s.hero_title_2.replace(/(\d+)/, '<em>$1</em>');
+      document.getElementById('heroLead').textContent = s.hero_lead;
+
+      const pres = document.getElementById('presentation');
+      s.presentation.forEach(p => pres.appendChild(el('p', null, p)));
+
+      const ht = document.getElementById('horairesTable');
+      s.horaires.forEach(h => {
+        const tr = el('tr');
+        tr.appendChild(el('td', null, h.jour));
+        tr.appendChild(el('td', null, h.detail));
+        ht.appendChild(tr);
+      });
+      document.getElementById('lieuText').textContent = s.lieu;
+
+      const tl = document.getElementById('tarifsList');
+      s.tarifs.forEach(t => {
+        const row = el('div', 'tariff-row');
+        row.appendChild(el('span', null, t.label));
+        row.appendChild(el('span', 'tariff-amount', t.montant));
+        tl.appendChild(row);
+      });
+      document.getElementById('tarifNote').textContent = s.tarif_note;
+
+      const jt = document.getElementById('journeesTable');
+      s.sportif_journees.forEach(j => {
+        const tr = el('tr');
+        tr.appendChild(el('td', null, j.code));
+        tr.appendChild(el('td', null, j.detail));
+        jt.appendChild(tr);
+      });
+      document.getElementById('resultatsNote').textContent = s.sportif_resultats_note;
+      if(s.spid_link){ document.getElementById('spidLink').href = s.spid_link; }
+
+      const c = s.contact;
+      const cc = document.getElementById('contactCard');
+      const lines = [
+        ['Président', c.president_nom + '<br>' + c.president_tel],
+        ['Secrétaire', c.secretaire_nom + '<br>' + c.secretaire_tel],
+        ['Email', c.email],
+        ['Adresse', c.adresse]
+      ];
+      lines.forEach(([role, detail]) => {
+        const line = el('div', 'contact-line');
+        line.appendChild(el('div', 'contact-role', role));
+        line.appendChild(el('div', 'contact-detail', detail));
+        cc.appendChild(line);
+      });
+      const social = el('div', 'social-row');
+      social.appendChild(el('a', 'social-pill', 'Instagram')).href = c.instagram;
+      social.appendChild(el('a', 'social-pill', 'Facebook')).href = c.facebook;
+      Array.from(social.children).forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+      cc.appendChild(social);
+
+      document.getElementById('footerText').textContent =
+        '© 2026 ASAG Tennis de Table La Haye-Fouassière — Association loi 1901 (' + s.affiliation + ')';
+    } catch(e){ console.error('site.json', e); }
+  }
+
+  async function renderGalerie(){
+    try {
+      const g = await loadJSON('/content/galerie.json');
+      const grid = document.getElementById('galleryGrid');
+      g.photos.forEach(p => {
+        const fig = el('figure', p.taille === 'large' ? 'g-wide' : (p.taille === 'haute' ? 'g-tall' : ''));
+        const img = el('img'); img.src = p.image; img.alt = p.legende;
+        fig.appendChild(img);
+        fig.appendChild(el('figcaption', null, p.legende));
+        grid.appendChild(fig);
+      });
+    } catch(e){ console.error('galerie.json', e); }
+  }
+
+  async function renderActus(){
+    try {
+      const a = await loadJSON('/content/actualites.json');
+      const grid = document.getElementById('newsGrid');
+      a.actus.forEach(item => {
+        const card = el('div', 'news-card');
+        card.appendChild(el('div', 'news-date', item.date_label));
+        card.appendChild(el('h4', null, item.titre));
+        card.appendChild(el('p', null, item.texte));
+        if(item.lien_billetterie){
+          card.appendChild(el('a', 'news-link', 'Réserver ma place →')).href = '#boutique';
+        }
+        grid.appendChild(card);
+      });
+    } catch(e){ console.error('actualites.json', e); }
+  }
+
+  async function renderEvenements(){
+    try {
+      const ev = await loadJSON('/content/evenements.json');
+      const list = document.getElementById('evenementsList');
+      ev.evenements.forEach(e2 => {
+        const row = el('div', 'tariff-row');
+        row.appendChild(el('span', null, e2.nom));
+        row.appendChild(el('span', 'tariff-amount', ''));
+        row.querySelector('.tariff-amount').style.fontSize = '1rem';
+        row.querySelector('.tariff-amount').textContent = e2.statut;
+        list.appendChild(row);
+      });
+      document.getElementById('evenementsNote').textContent = ev.note;
+      if(ev.lien_paiement){ document.getElementById('paiementLink').href = ev.lien_paiement; }
+    } catch(e){ console.error('evenements.json', e); }
+  }
+
+  renderSite();
+  renderGalerie();
+  renderActus();
+  renderEvenements();
+</script>
+
+</body>
+</html>

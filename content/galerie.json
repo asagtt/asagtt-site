@@ -1,0 +1,9 @@
+{
+  "photos": [
+    { "image": "/images/asagtt-entrainement-salle.jpg", "legende": "Entraînement — salle du Moulin des Landes", "taille": "large" },
+    { "image": "/images/asagtt-trophee.jpg", "legende": "Challenge Pascal Luneau", "taille": "haute" },
+    { "image": "/images/asagtt-apero-bateau.jpg", "legende": "Sortie de rentrée", "taille": "normale" },
+    { "image": "/images/asagtt-sortie-bateau-arrivee.jpg", "legende": "Retour au port", "taille": "normale" },
+    { "image": "/images/asagtt-dejeuner-exterieur.jpg", "legende": "Déjeuner de club", "taille": "large" }
+  ]
+}
