@@ -153,7 +153,8 @@
   };
 
   function getRoles(user){
-    return (user && user.app_metadata && user.app_metadata.roles) || [];
+    const roles = (user && user.app_metadata && user.app_metadata.roles) || [];
+    return roles.map(r => String(r).trim().toLowerCase());
   }
 
   function initCMS(user){
