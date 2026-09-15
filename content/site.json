@@ -10,26 +10,319 @@
     "Pour toute demande d'information ou pour organiser une séance d'essai, n'hésitez pas à nous contacter."
   ],
   "horaires": [
-    { "jour": "Vendredi", "detail": "18h30 – 20h00 · créneau jeunes" },
-    { "jour": "Vendredi", "detail": "20h00 – 21h30 · créneau adultes" },
-    { "jour": "Vendredi", "detail": "Après 21h30 · loisir libre" },
-    { "jour": "Samedi", "detail": "Compétition jeunes (selon calendrier)" },
-    { "jour": "Dimanche", "detail": "Compétition (selon calendrier du championnat)" }
+    {
+      "jour": "Vendredi",
+      "detail": "18h30 – 20h00 · créneau jeunes"
+    },
+    {
+      "jour": "Vendredi",
+      "detail": "20h00 – 21h30 · créneau adultes"
+    },
+    {
+      "jour": "Vendredi",
+      "detail": "Après 21h30 · loisir libre"
+    },
+    {
+      "jour": "Samedi",
+      "detail": "Compétition jeunes (selon calendrier)"
+    },
+    {
+      "jour": "Dimanche",
+      "detail": "Compétition (selon calendrier du championnat)"
+    }
   ],
   "lieu": "Salle du Moulin des Landes — La Haye-Fouassière",
   "tarifs": [
-    { "label": "Jusqu'à 18 ans", "montant": "110 €" },
-    { "label": "Adulte", "montant": "120 €" },
-    { "label": "Critérium", "montant": "variable" }
+    {
+      "label": "Jusqu'à 18 ans",
+      "montant": "110 €"
+    },
+    {
+      "label": "Adulte",
+      "montant": "120 €"
+    },
+    {
+      "label": "Critérium",
+      "montant": "variable"
+    }
   ],
   "tarif_note": "Tarif du critérium ajusté selon les compétitions. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
-  "sportif_journees": [
-    { "code": "J1", "detail": "Équipe 1 — à domicile (date à venir)" },
-    { "code": "J2", "detail": "Équipe 1 — déplacement (date à venir)" },
-    { "code": "J1", "detail": "Équipe jeunes — à domicile (date à venir)" }
+  "equipes": [
+    {
+      "nom": "Équipe 1",
+      "division": "Départementale 1",
+      "poule": "Poule 3",
+      "position": "7"
+    },
+    {
+      "nom": "Équipe 2",
+      "division": "Départementale 3",
+      "poule": "Poule 8",
+      "position": "3"
+    },
+    {
+      "nom": "Équipe 3",
+      "division": "Départementale 4",
+      "poule": "Poule 7",
+      "position": "2"
+    },
+    {
+      "nom": "Équipe 4",
+      "division": "Départementale 4",
+      "poule": "Poule 8",
+      "position": "6"
+    },
+    {
+      "nom": "Équipe 5",
+      "division": "Départementale 4",
+      "poule": "Poule 9",
+      "position": "2"
+    },
+    {
+      "nom": "Équipe 6",
+      "division": "Départementale 4",
+      "poule": "Poule 14",
+      "position": "6"
+    }
   ],
+  "sportif_journees": [
+    {
+      "equipe": "Équipe 1",
+      "date": "27 septembre 2026",
+      "adversaire": "Le Pallet (2)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "27 septembre 2026",
+      "adversaire": "Le Pallet (6)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "27 septembre 2026",
+      "adversaire": "Mauves (3)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "27 septembre 2026",
+      "adversaire": "Boussay (4)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "27 septembre 2026",
+      "adversaire": "ASCBG (3)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "27 septembre 2026",
+      "adversaire": "Mouzillon (9)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "4 octobre 2026",
+      "adversaire": "Mouzillon (4)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "4 octobre 2026",
+      "adversaire": "Aigrefeuille (2)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "4 octobre 2026",
+      "adversaire": "Le Pallet (7)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "4 octobre 2026",
+      "adversaire": "Vertou ASP (5)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "4 octobre 2026",
+      "adversaire": "La Bernerie (3)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "18 octobre 2026",
+      "adversaire": "St-Julien (6)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "18 octobre 2026",
+      "adversaire": "Vieillevigne (4)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "18 octobre 2026",
+      "adversaire": "Goulaine TT (4)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "18 octobre 2026",
+      "adversaire": "St-Julien (9)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "18 octobre 2026",
+      "adversaire": "Legé (3)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "18 octobre 2026",
+      "adversaire": "St Sébastien (13)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "8 novembre 2026",
+      "adversaire": "Nantes TT (10)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "8 novembre 2026",
+      "adversaire": "Bouaye (5)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "8 novembre 2026",
+      "adversaire": "Clisson (5)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "8 novembre 2026",
+      "adversaire": "Nantes TT (16)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "8 novembre 2026",
+      "adversaire": "Corcoué (3)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "8 novembre 2026",
+      "adversaire": "Nantes TT (17)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "22 novembre 2026",
+      "adversaire": "Aigrefeuille (1)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "22 novembre 2026",
+      "adversaire": "Loroux Bottereau (4)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "22 novembre 2026",
+      "adversaire": "Mouzillon (8)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "22 novembre 2026",
+      "adversaire": "Clisson (6)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "22 novembre 2026",
+      "adversaire": "Chevrolière Lac (4)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "22 novembre 2026",
+      "adversaire": "Rezé TT (8)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "6 décembre 2026",
+      "adversaire": "Vieillevigne (1)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "6 décembre 2026",
+      "adversaire": "St-Sébastien (9)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "6 décembre 2026",
+      "adversaire": "St Sébastien (10)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "6 décembre 2026",
+      "adversaire": "Goulaine TT (5)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "6 décembre 2026",
+      "adversaire": "St Colomban (5)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "6 décembre 2026",
+      "adversaire": "Carquefou (5)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 1",
+      "date": "13 décembre 2026",
+      "adversaire": "St-Sébastien (5)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 3",
+      "date": "13 décembre 2026",
+      "adversaire": "Ent Pong Sud Loire (3)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 4",
+      "date": "13 décembre 2026",
+      "adversaire": "St Sébastien (11)",
+      "domicile": true
+    },
+    {
+      "equipe": "Équipe 6",
+      "date": "13 décembre 2026",
+      "adversaire": "Corcoué (5)",
+      "domicile": true
+    }
+  ],
+  "sportif_resultats": [],
   "sportif_resultats_note": "Résultats à venir en début de saison",
-  "spid_link": "",
   "contact": {
     "president_nom": "Tristan Guiheneuf",
     "president_tel": "06 62 29 17 22",
