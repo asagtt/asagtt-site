@@ -21,11 +21,11 @@
   a{color:inherit;} img{max-width:100%; display:block;}
   .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
   header{position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line);}
-  .headbar{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1120px; margin:0 auto; gap:16px;}
-  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
-  .brand img{height:46px; width:auto;}
-  .brand-text{font-family:'Bebas Neue', sans-serif; font-size:1.35rem; letter-spacing:0.02em; color:var(--navy);}
-  .brand-text span{display:block; font-family:'Work Sans',sans-serif; font-size:0.62rem; letter-spacing:0.08em; color:var(--ink); opacity:0.6; font-weight:600;}
+  .headbar{display:flex; align-items:center; justify-content:space-between; padding:22px 24px; max-width:1180px; margin:0 auto; gap:16px;}
+  .brand{display:flex; align-items:center; gap:16px; text-decoration:none;}
+  .brand img{height:68px; width:auto;}
+  .brand-text{font-family:'Bebas Neue', sans-serif; font-size:1.7rem; letter-spacing:0.02em; color:var(--navy);}
+  .brand-text span{display:block; font-family:'Work Sans',sans-serif; font-size:0.7rem; letter-spacing:0.08em; color:var(--ink); opacity:0.6; font-weight:600;}
   nav{display:flex; gap:28px;}
   nav a{font-size:0.92rem; font-weight:600; text-decoration:none; color:var(--ink); position:relative; padding:4px 0;}
   nav a::after{content:""; position:absolute; left:0; right:0; bottom:-3px; height:2px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform 0.2s ease;}
@@ -98,7 +98,10 @@
   .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:0.82rem; opacity:0.65;}
   .foot-row a{text-decoration:underline; text-underline-offset:2px;}
   @media (max-width:860px){
-    nav{position:fixed; top:73px; left:0; right:0; bottom:0; background:var(--paper); flex-direction:column; padding:24px; transform:translateX(100%); transition:transform 0.25s ease; border-top:1px solid var(--line);}
+    .brand img{height:52px;}
+    .brand-text{font-size:1.4rem;}
+    .headbar{padding:16px 24px;}
+    nav{position:fixed; top:97px; left:0; right:0; bottom:0; background:var(--paper); flex-direction:column; padding:24px; transform:translateX(100%); transition:transform 0.25s ease; border-top:1px solid var(--line);}
     nav.open{transform:translateX(0);}
     nav a{font-size:1.3rem; padding:12px 0; border-bottom:1px solid var(--line);}
     .nav-toggle{display:block;}
