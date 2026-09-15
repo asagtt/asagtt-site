@@ -54,14 +54,33 @@
               },
               { name: "tarif_note", label: "Note sous les tarifs", widget: "text" },
               {
-                name: "sportif_journees", label: "Prochaines journées de championnat", widget: "list",
+                name: "equipes", label: "Nos équipes cette saison", widget: "list",
                 fields: [
-                  { name: "code", label: "Code (ex. J1)", widget: "string" },
-                  { name: "detail", label: "Détail", widget: "string" }
+                  { name: "nom", label: "Nom de l'équipe (ex. Équipe 1)", widget: "string" },
+                  { name: "division", label: "Division (ex. Départementale 1)", widget: "string" },
+                  { name: "poule", label: "Poule (ex. Poule 3)", widget: "string" },
+                  { name: "position", label: "Position dans la poule", widget: "string" }
                 ]
               },
-              { name: "sportif_resultats_note", label: "Note derniers résultats", widget: "string" },
-              { name: "spid_link", label: "Lien FFTT / SPID (résultats officiels)", widget: "string", required: false },
+              {
+                name: "sportif_journees", label: "Prochaines journées de championnat", widget: "list",
+                fields: [
+                  { name: "equipe", label: "Équipe (ex. Équipe 1)", widget: "string" },
+                  { name: "date", label: "Date (ex. 27 septembre 2026)", widget: "string" },
+                  { name: "adversaire", label: "Adversaire", widget: "string" },
+                  { name: "domicile", label: "À domicile ?", widget: "boolean", default: false }
+                ]
+              },
+              {
+                name: "sportif_resultats", label: "Derniers résultats", widget: "list", required: false,
+                fields: [
+                  { name: "equipe", label: "Équipe (ex. Équipe 1)", widget: "string" },
+                  { name: "date", label: "Date (ex. 12 octobre)", widget: "string" },
+                  { name: "rencontre", label: "Rencontre (ex. vs La Chapelle-sur-Erdre)", widget: "string" },
+                  { name: "score", label: "Score", widget: "string", required: false }
+                ]
+              },
+              { name: "sportif_resultats_note", label: "Message affiché tant qu'il n'y a aucun résultat", widget: "string" },
               {
                 name: "contact", label: "Contact", widget: "object",
                 fields: [
