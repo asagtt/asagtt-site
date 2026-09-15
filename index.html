@@ -178,7 +178,11 @@
 
 <section id="sportif">
   <div class="wrap">
-    <div class="section-head"><h2>Sportif</h2><p>Journées de championnat et résultats de nos équipes.</p></div>
+    <div class="section-head"><h2>Sportif</h2><p>Nos équipes, journées de championnat et résultats.</p></div>
+    <div class="info-card" style="margin-bottom:20px;">
+      <h3>Nos équipes cette saison</h3>
+      <table class="schedule" id="equipesTable"></table>
+    </div>
     <div class="club-grid">
       <div class="info-card">
         <h3>Prochaines journées</h3>
@@ -187,9 +191,8 @@
       </div>
       <div class="info-card">
         <h3>Derniers résultats</h3>
-        <table class="schedule"><tr><td>—</td><td id="resultatsNote"></td></tr></table>
-        <p class="loc" style="margin-top:14px;">Le classement et l'historique complet des rencontres restent consultables en direct sur le site officiel de la FFTT (SPID), via le bouton ci-dessous.</p>
-        <a href="#" id="spidLink" class="btn btn-ghost" style="margin-top:18px;">Voir sur FFTT / SPID ↗</a>
+        <table class="schedule" id="resultatsTable"></table>
+        <p class="loc" id="resultatsNote" style="display:none;"></p>
       </div>
     </div>
   </div>
@@ -285,15 +288,34 @@
       });
       document.getElementById('tarifNote').textContent = s.tarif_note;
 
+      const et = document.getElementById('equipesTable');
+      (s.equipes || []).forEach(eq => {
+        const tr = el('tr');
+        tr.appendChild(el('td', null, eq.nom));
+        tr.appendChild(el('td', null, eq.division + ' — ' + eq.poule + ' (place ' + eq.position + ')'));
+        et.appendChild(tr);
+      });
+
       const jt = document.getElementById('journeesTable');
       s.sportif_journees.forEach(j => {
         const tr = el('tr');
-        tr.appendChild(el('td', null, j.code));
-        tr.appendChild(el('td', null, j.detail));
+        tr.appendChild(el('td', null, j.equipe + ' · ' + j.date));
+        tr.appendChild(el('td', null, (j.domicile ? 'Reçoit ' : 'Se déplace à ') + j.adversaire));
         jt.appendChild(tr);
       });
-      document.getElementById('resultatsNote').textContent = s.sportif_resultats_note;
-      if(s.spid_link){ document.getElementById('spidLink').href = s.spid_link; }
+      const rt = document.getElementById('resultatsTable');
+      if (s.sportif_resultats && s.sportif_resultats.length > 0) {
+        s.sportif_resultats.forEach(r => {
+          const tr = el('tr');
+          tr.appendChild(el('td', null, r.equipe + ' · ' + r.date));
+          tr.appendChild(el('td', null, r.rencontre + (r.score ? ' — ' + r.score : '')));
+          rt.appendChild(tr);
+        });
+      } else {
+        const note = document.getElementById('resultatsNote');
+        note.textContent = s.sportif_resultats_note;
+        note.style.display = '';
+      }
 
       const c = s.contact;
       const cc = document.getElementById('contactCard');
