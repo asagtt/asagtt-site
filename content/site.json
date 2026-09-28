@@ -52,37 +52,37 @@
       "nom": "Équipe 1",
       "division": "Départementale 1",
       "poule": "Poule 3",
-      "position": "7"
+      "position": ""
     },
     {
       "nom": "Équipe 2",
       "division": "Départementale 3",
       "poule": "Poule 8",
-      "position": "3"
+      "position": ""
     },
     {
       "nom": "Équipe 3",
       "division": "Départementale 4",
-      "poule": "Poule 7",
-      "position": "2"
+      "poule": "Poule 8",
+      "position": ""
     },
     {
       "nom": "Équipe 4",
       "division": "Départementale 4",
-      "poule": "Poule 8",
-      "position": "6"
+      "poule": "Poule 9",
+      "position": ""
     },
     {
       "nom": "Équipe 5",
       "division": "Départementale 4",
-      "poule": "Poule 9",
-      "position": "2"
+      "poule": "Poule 10",
+      "position": ""
     },
     {
       "nom": "Équipe 6",
       "division": "Départementale 4",
-      "poule": "Poule 14",
-      "position": "6"
+      "poule": "Poule 11",
+      "position": ""
     }
   ],
   "sportif_journees": [
@@ -101,25 +101,25 @@
     {
       "equipe": "Équipe 3",
       "date": "27 septembre 2026",
-      "adversaire": "Mauves (3)",
+      "adversaire": "Goulaine TT (4)",
       "domicile": true
     },
     {
       "equipe": "Équipe 4",
       "date": "27 septembre 2026",
-      "adversaire": "Boussay (4)",
-      "domicile": false
+      "adversaire": "St Sébastien (11)",
+      "domicile": true
     },
     {
       "equipe": "Équipe 5",
       "date": "27 septembre 2026",
-      "adversaire": "ASCBG (3)",
-      "domicile": true
+      "adversaire": "St Julien (9)",
+      "domicile": false
     },
     {
       "equipe": "Équipe 6",
       "date": "27 septembre 2026",
-      "adversaire": "Mouzillon (9)",
+      "adversaire": "Rezé TT (9)",
       "domicile": false
     },
     {
@@ -135,57 +135,51 @@
       "domicile": false
     },
     {
-      "equipe": "Équipe 3",
+      "equipe": "Équipe 4",
       "date": "4 octobre 2026",
-      "adversaire": "Le Pallet (7)",
+      "adversaire": "Goulaine TT (5)",
       "domicile": false
     },
     {
-      "equipe": "Équipe 4",
+      "equipe": "Équipe 6",
       "date": "4 octobre 2026",
-      "adversaire": "Vertou ASP (5)",
+      "adversaire": "St Sébastien (13)",
       "domicile": true
     },
     {
-      "equipe": "Équipe 5",
-      "date": "4 octobre 2026",
-      "adversaire": "La Bernerie (3)",
-      "domicile": false
-    },
-    {
       "equipe": "Équipe 1",
-      "date": "18 octobre 2026",
-      "adversaire": "St-Julien (6)",
+      "date": "17 octobre 2026",
+      "adversaire": "St Julien (6)",
       "domicile": false
     },
     {
       "equipe": "Équipe 2",
-      "date": "18 octobre 2026",
+      "date": "17 octobre 2026",
       "adversaire": "Vieillevigne (4)",
       "domicile": true
     },
     {
       "equipe": "Équipe 3",
-      "date": "18 octobre 2026",
-      "adversaire": "Goulaine TT (4)",
-      "domicile": true
-    },
-    {
-      "equipe": "Équipe 4",
-      "date": "18 octobre 2026",
-      "adversaire": "St-Julien (9)",
+      "date": "17 octobre 2026",
+      "adversaire": "Boussay (4)",
       "domicile": false
     },
     {
+      "equipe": "Équipe 4",
+      "date": "17 octobre 2026",
+      "adversaire": "Vieillevigne (5)",
+      "domicile": true
+    },
+    {
       "equipe": "Équipe 5",
-      "date": "18 octobre 2026",
-      "adversaire": "Legé (3)",
+      "date": "17 octobre 2026",
+      "adversaire": "Nantes St Médard (10)",
       "domicile": true
     },
     {
       "equipe": "Équipe 6",
-      "date": "18 octobre 2026",
-      "adversaire": "St Sébastien (13)",
+      "date": "17 octobre 2026",
+      "adversaire": "Ste Luce (9)",
       "domicile": false
     },
     {
@@ -203,26 +197,26 @@
     {
       "equipe": "Équipe 3",
       "date": "8 novembre 2026",
-      "adversaire": "Clisson (5)",
-      "domicile": false
+      "adversaire": "St Sébastien (10)",
+      "domicile": true
     },
     {
       "equipe": "Équipe 4",
       "date": "8 novembre 2026",
-      "adversaire": "Nantes TT (16)",
+      "adversaire": "St Colomban (5)",
       "domicile": true
     },
     {
       "equipe": "Équipe 5",
       "date": "8 novembre 2026",
-      "adversaire": "Corcoué (3)",
+      "adversaire": "Mouzillon (8)",
       "domicile": false
     },
     {
       "equipe": "Équipe 6",
       "date": "8 novembre 2026",
-      "adversaire": "Nantes TT (17)",
-      "domicile": true
+      "adversaire": "Clisson (5)",
+      "domicile": false
     },
     {
       "equipe": "Équipe 1",
@@ -239,26 +233,26 @@
     {
       "equipe": "Équipe 3",
       "date": "22 novembre 2026",
-      "adversaire": "Mouzillon (8)",
-      "domicile": true
+      "adversaire": "Thouaré (3)",
+      "domicile": false
     },
     {
       "equipe": "Équipe 4",
       "date": "22 novembre 2026",
-      "adversaire": "Clisson (6)",
+      "adversaire": "Pont St Martin (6)",
       "domicile": false
     },
     {
       "equipe": "Équipe 5",
       "date": "22 novembre 2026",
-      "adversaire": "Chevrolière Lac (4)",
+      "adversaire": "Le Pallet (8)",
       "domicile": true
     },
     {
       "equipe": "Équipe 6",
       "date": "22 novembre 2026",
-      "adversaire": "Rezé TT (8)",
-      "domicile": false
+      "adversaire": "Carquefou (5)",
+      "domicile": true
     },
     {
       "equipe": "Équipe 1",
@@ -269,55 +263,61 @@
     {
       "equipe": "Équipe 2",
       "date": "6 décembre 2026",
-      "adversaire": "St-Sébastien (9)",
+      "adversaire": "St Sébastien (9)",
       "domicile": true
     },
     {
       "equipe": "Équipe 3",
       "date": "6 décembre 2026",
-      "adversaire": "St Sébastien (10)",
+      "adversaire": "Nantes TT (17)",
       "domicile": true
     },
     {
       "equipe": "Équipe 4",
       "date": "6 décembre 2026",
-      "adversaire": "Goulaine TT (5)",
-      "domicile": false
+      "adversaire": "Ent Pong Sud Loire (3)",
+      "domicile": true
     },
     {
       "equipe": "Équipe 5",
       "date": "6 décembre 2026",
-      "adversaire": "St Colomban (5)",
-      "domicile": true
-    },
-    {
-      "equipe": "Équipe 6",
-      "date": "6 décembre 2026",
-      "adversaire": "Carquefou (5)",
+      "adversaire": "Vertou ASP (5)",
       "domicile": false
     },
     {
       "equipe": "Équipe 1",
       "date": "13 décembre 2026",
-      "adversaire": "St-Sébastien (5)",
+      "adversaire": "St Sébastien (5)",
       "domicile": true
+    },
+    {
+      "equipe": "Équipe 2",
+      "date": "13 décembre 2026",
+      "adversaire": "Rezé TT (8)",
+      "domicile": false
     },
     {
       "equipe": "Équipe 3",
       "date": "13 décembre 2026",
-      "adversaire": "Ent Pong Sud Loire (3)",
+      "adversaire": "Le Pallet (7)",
       "domicile": false
     },
     {
       "equipe": "Équipe 4",
       "date": "13 décembre 2026",
-      "adversaire": "St Sébastien (11)",
+      "adversaire": "Château Thébaud (2)",
+      "domicile": false
+    },
+    {
+      "equipe": "Équipe 5",
+      "date": "13 décembre 2026",
+      "adversaire": "St Sébastien (12)",
       "domicile": true
     },
     {
       "equipe": "Équipe 6",
       "date": "13 décembre 2026",
-      "adversaire": "Corcoué (5)",
+      "adversaire": "Mouzillon (9)",
       "domicile": true
     }
   ],
