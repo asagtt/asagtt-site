@@ -297,7 +297,7 @@
       (s.equipes || []).forEach(eq => {
         const tr = el('tr');
         tr.appendChild(el('td', null, eq.nom));
-        tr.appendChild(el('td', null, eq.division + ' — ' + eq.poule + ' (place ' + eq.position + ')'));
+        tr.appendChild(el('td', null, eq.division + ' — ' + eq.poule + (eq.position ? ' (place ' + eq.position + ')' : '')));
         et.appendChild(tr);
       });
 
