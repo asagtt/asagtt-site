@@ -1,14 +1,18 @@
 {
-  "hero_tag": "CLUB AFFILIÉ FFTT — SAISON 2026-2027",
+  "contact": {
+    "president_nom": "Tristan Guiheneuf",
+    "president_tel": "06 62 29 17 22",
+    "secretaire_nom": "Christine Guevel",
+    "secretaire_tel": "07 71 01 65 77",
+    "email": "asagtt@gmail.com",
+    "adresse": "Salle du Moulin des Landes<br>Allée des sports, 44690 La Haye-Fouassière",
+    "instagram": "https://www.instagram.com/tennisdetable_lahayefouassiere?stkn=MWswY3lrNmlrN3A1Nw==",
+    "facebook": "https://www.facebook.com/share/1CkidWHxLg/"
+  },
+  "hero_lead": "École de jeunes, loisir libre et compétition, dans la salle du Moulin des Landes. Le club de La Haye-Fouassière accueille tous les niveaux, du débutant au licencié compétiteur.",
   "hero_title_1": "On peut commencer à 6 ans,",
   "hero_title_2": "continuer à 70.",
-  "hero_lead": "École de jeunes, loisir libre et compétition, dans la salle du Moulin des Landes. Le club de La Haye-Fouassière accueille tous les niveaux, du débutant au licencié compétiteur.",
-  "presentation": [
-    "Affilié à la Fédération Française de Tennis de Table, le club de La Haye-Fouassière accueille chaque saison des pratiquants de tous âges et de tous niveaux, du débutant au compétiteur licencié.",
-    "Structuré autour d'une école de jeunes, de créneaux de loisir libre et de créneaux d'entraînement pour la compétition, le club permet à chacun de progresser à son rythme dans un cadre encadré et sécurisé. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
-    "Au-delà de l'activité sportive, le club s'appuie sur une vie associative active — événements, animations et moments de convivialité tout au long de la saison — portée par ses bénévoles et son bureau.",
-    "Pour toute demande d'information ou pour organiser une séance d'essai, n'hésitez pas à nous contacter."
-  ],
+  "numero_club_fftt": "12440039",
   "horaires": [
     {
       "jour": "Vendredi",
@@ -32,6 +36,8 @@
     }
   ],
   "lieu": "Salle du Moulin des Landes — La Haye-Fouassière",
+  "tarif_note": "Tarif du critérium ajusté selon les compétitions. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
+  "affiliation": "W442009268",
   "tarifs": [
     {
       "label": "Jusqu'à 18 ans",
@@ -46,43 +52,43 @@
       "montant": "variable"
     }
   ],
-  "tarif_note": "Tarif du critérium ajusté selon les compétitions. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
-  "equipes": [
+  "hero_tag": "CLUB AFFILIÉ FFTT — SAISON 2026-2027",
+  "sportif_resultats": [
     {
-      "nom": "Équipe 1",
-      "division": "Départementale 1",
-      "poule": "Poule 3",
-      "position": ""
+      "equipe": "D4 poule 10",
+      "date": "27/09",
+      "rencontre": "extérieure St Julien ",
+      "score": " Deuce 5-5"
     },
     {
-      "nom": "Équipe 2",
-      "division": "Départementale 3",
-      "poule": "Poule 8",
-      "position": ""
+      "equipe": "D4 poule 8",
+      "date": "27/09",
+      "rencontre": "A domicile Goulaine TT",
+      "score": "Victoire 10-0"
     },
     {
-      "nom": "Équipe 3",
-      "division": "Départementale 4",
-      "poule": "Poule 8",
-      "position": ""
+      "equipe": "D4 poule 9",
+      "date": "27/09",
+      "rencontre": "Extérieure St Sébastien ",
+      "score": "Défaite 1-9"
     },
     {
-      "nom": "Équipe 4",
-      "division": "Départementale 4",
-      "poule": "Poule 9",
-      "position": ""
+      "equipe": "D4 poule 11",
+      "date": "27/09",
+      "rencontre": "Extérieure VS Rezé",
+      "score": "Défaite 4-6 "
     },
     {
-      "nom": "Équipe 5",
-      "division": "Départementale 4",
-      "poule": "Poule 10",
-      "position": ""
+      "equipe": "D3 ",
+      "date": "27/09",
+      "rencontre": "Domicile vs Le Pallet",
+      "score": "Victoire 18-2"
     },
     {
-      "nom": "Équipe 6",
-      "division": "Départementale 4",
-      "poule": "Poule 11",
-      "position": ""
+      "equipe": "D1",
+      "date": "27/09",
+      "rencontre": "Extérieure Le Pallet ",
+      "score": "Défaite 12-8"
     }
   ],
   "sportif_journees": [
@@ -321,18 +327,49 @@
       "domicile": true
     }
   ],
-  "sportif_resultats": [],
+  "presentation": [
+    "Affilié à la Fédération Française de Tennis de Table, le club de La Haye-Fouassière accueille chaque saison des pratiquants de tous âges et de tous niveaux, du débutant au compétiteur licencié.",
+    "Structuré autour d'une école de jeunes, de créneaux de loisir libre et de créneaux d'entraînement pour la compétition, le club permet à chacun de progresser à son rythme dans un cadre encadré et sécurisé. L'inscription annuelle comprend la licence FFTT et la cotisation club.",
+    "Au-delà de l'activité sportive, le club s'appuie sur une vie associative active — événements, animations et moments de convivialité tout au long de la saison — portée par ses bénévoles et son bureau.",
+    "Pour toute demande d'information ou pour organiser une séance d'essai, n'hésitez pas à nous contacter."
+  ],
   "sportif_resultats_note": "Résultats à venir en début de saison",
-  "contact": {
-    "president_nom": "Tristan Guiheneuf",
-    "president_tel": "06 62 29 17 22",
-    "secretaire_nom": "Christine Guevel",
-    "secretaire_tel": "07 71 01 65 77",
-    "email": "asagtt@gmail.com",
-    "adresse": "Salle du Moulin des Landes<br>Allée des sports, 44690 La Haye-Fouassière",
-    "instagram": "https://www.instagram.com/tennisdetable_lahayefouassiere?stkn=MWswY3lrNmlrN3A1Nw==",
-    "facebook": "https://www.facebook.com/share/1CkidWHxLg/"
-  },
-  "affiliation": "W442009268",
-  "numero_club_fftt": "12440039"
+  "equipes": [
+    {
+      "nom": "Équipe 1",
+      "division": "Départementale 1",
+      "poule": "Poule 3",
+      "position": ""
+    },
+    {
+      "nom": "Équipe 2",
+      "division": "Départementale 3",
+      "poule": "Poule 8",
+      "position": ""
+    },
+    {
+      "nom": "Équipe 3",
+      "division": "Départementale 4",
+      "poule": "Poule 8",
+      "position": ""
+    },
+    {
+      "nom": "Équipe 4",
+      "division": "Départementale 4",
+      "poule": "Poule 9",
+      "position": ""
+    },
+    {
+      "nom": "Équipe 5",
+      "division": "Départementale 4",
+      "poule": "Poule 10",
+      "position": ""
+    },
+    {
+      "nom": "Équipe 6",
+      "division": "Départementale 4",
+      "poule": "Poule 11",
+      "position": ""
+    }
+  ]
 }
